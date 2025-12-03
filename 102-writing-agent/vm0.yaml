@@ -11,5 +11,5 @@ agents:
 
 volumes:
   claude-system:
-    name: writing-claude
+    name: claude-writing
     version: latest
