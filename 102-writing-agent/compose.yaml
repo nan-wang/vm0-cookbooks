@@ -1,0 +1,15 @@
+version: "1.0"
+
+agents:
+  writing:
+    description: "A writing agent"
+    provider: claude-code
+    image: vm0-claude-code-dev
+    volumes:
+      - claude-system:/home/user/.config/claude
+    working_dir: /home/user/workspace
+
+volumes:
+  claude-system:
+    name: writing-claude
+    version: latest
