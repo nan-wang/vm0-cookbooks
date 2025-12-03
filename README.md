@@ -1,6 +1,12 @@
 # vm0-cookbooks
 
-## 101-intro
+## Quick Cook
+```
+cd 101-intro
+vm0 cook "echo hello world to readme.md"
+```
+
+## 101-intro - Cook myself
 
 ```
 cd claude-files
