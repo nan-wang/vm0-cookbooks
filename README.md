@@ -6,7 +6,7 @@ cd 101-intro
 vm0 cook "echo hello world to readme.md"
 ```
 
-## 101-intro - Cook myself
+## DIY 101-intro
 
 ```
 cd claude-files
