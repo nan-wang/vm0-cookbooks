@@ -1,7 +1,7 @@
 version: "1.0"
 
 agents:
-  demo:
+  intro:
     description: "A demo agent"
     provider: claude-code
     image: vm0-claude-code-dev
