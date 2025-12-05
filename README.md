@@ -2,6 +2,8 @@
 
 ## Quick Cook
 ```
+pnpm install -g @vm0/cli
+
 cd 101-intro
 vm0 cook "echo hello world to readme.md"
 ```
