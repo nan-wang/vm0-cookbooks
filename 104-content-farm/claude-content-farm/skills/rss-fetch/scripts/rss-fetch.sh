@@ -1,19 +1,24 @@
 #!/bin/bash
 
 # RSS Feed Fetcher
-# Fetches and parses RSS feeds from multiple tech news sources
+# Fetches and parses RSS feeds from provided URLs
+# Usage: rss-fetch.sh "url1" "url2" "url3" ...
 # Output: /tmp/rss/feeds.json
 
 set -e
 
-# Pre-configured RSS feeds
-RSS_FEEDS=(
-  "https://hnrss.org/frontpage"
-  "https://techcrunch.com/feed/"
-  "https://www.wired.com/feed/rss"
-  "https://feeds.arstechnica.com/arstechnica/technology-lab"
-  "https://www.theverge.com/rss/index.xml"
-)
+# Check if RSS URLs are provided
+if [ $# -eq 0 ]; then
+    echo "Error: No RSS feed URLs provided"
+    echo "Usage: rss-fetch.sh \"url1\" \"url2\" \"url3\" ..."
+    echo ""
+    echo "Example:"
+    echo "  rss-fetch.sh \"https://hnrss.org/frontpage\" \"https://techcrunch.com/feed/\""
+    exit 1
+fi
+
+# RSS feeds from command line arguments
+RSS_FEEDS=("$@")
 
 OUTPUT_DIR="/tmp/rss"
 OUTPUT_FILE="${OUTPUT_DIR}/feeds.json"

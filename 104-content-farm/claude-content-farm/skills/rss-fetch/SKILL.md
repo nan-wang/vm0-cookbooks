@@ -1,11 +1,11 @@
 ---
 name: rss-fetch
-description: Fetch and parse RSS feeds from popular tech news sources. Use this skill when the user wants to gather news articles for content creation.
+description: Fetch and parse RSS feeds from provided URLs. Use this skill when the user wants to gather news articles for content creation.
 ---
 
 # RSS Feed Fetcher
 
-This skill fetches and parses RSS feeds from multiple tech news sources, extracting article titles, descriptions, links, and publication dates.
+This skill fetches and parses RSS feeds from provided URLs, extracting article titles, descriptions, links, and publication dates.
 
 ## When to Use
 
@@ -16,20 +16,23 @@ Use this skill when:
 
 ## How to Use
 
-Execute the script located at `skills/rss-fetch/scripts/rss-fetch.sh`:
+Execute the script with RSS feed URLs as arguments:
 
 ```bash
-rss-fetch.sh
+rss-fetch.sh "url1" "url2" "url3" ...
 ```
 
-## Included RSS Sources
+### Parameters
 
-The script fetches from these pre-configured sources:
-- **Hacker News** - Tech community discussions and links
-- **TechCrunch** - Startup and technology news
-- **Wired** - Technology, science, and culture
-- **Ars Technica** - Technology and science reporting
-- **The Verge** - Technology, science, art, and culture
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| urls | Yes | One or more RSS feed URLs to fetch |
+
+### Example
+
+```bash
+rss-fetch.sh "https://hnrss.org/frontpage" "https://techcrunch.com/feed/" "https://www.wired.com/feed/rss"
+```
 
 ## Output
 
@@ -54,6 +57,7 @@ Results are saved to `/tmp/rss/feeds.json` with this structure:
 ## Guidelines
 
 1. Run this skill at the beginning of the content creation workflow
-2. After fetching, analyze the articles to find relevant topics
-3. Use the article links as sources for your generated content
-4. Filter articles based on the user's specified topic/keywords
+2. Pass all RSS URLs configured in CLAUDE.md as arguments
+3. After fetching, analyze the articles to find relevant topics
+4. Use the article links as sources for your generated content
+5. Filter articles based on the user's specified topic/keywords
