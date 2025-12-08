@@ -1,0 +1,17 @@
+version: "1.0"
+
+agents:
+  github-agent:
+    description: "GitHub automation assistant using gh CLI for repos, issues, PRs, and more"
+    provider: claude-code
+    image: 109-github-cli
+    volumes:
+      - claude-github-cli:/home/user/.config/claude
+    working_dir: /home/user/workspace
+    environment:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+volumes:
+  claude-github-cli:
+    name: claude-github-cli
+    version: latest
