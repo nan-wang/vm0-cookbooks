@@ -13,7 +13,7 @@ npm install -g @vm0/cli
 ```bash
 vm0 auth login
 cd 101-intro
-vm0 cook
+vm0 cook "echo hello world to readme.md"
 ```
 
 ## Setup and Run
@@ -24,7 +24,7 @@ The simplest way to run an agent. Automatically handles volume and artifact setu
 
 ```bash
 cd 101-intro
-vm0 cook                  # Set up and run the agent
+vm0 cook                  # auto setup
 ```
 
 ### Manual Setup (Step by Step)
@@ -47,8 +47,8 @@ cd ..
 Prepare an artifact for the workspace:
 
 ```bash
-mkdir my-artifact
-cd my-artifact
+mkdir artifact
+cd artifact
 vm0 artifact init    # Initialize artifact
 vm0 artifact push    # Upload to cloud
 cd ..
@@ -58,10 +58,10 @@ cd ..
 
 ```bash
 vm0 compose vm0.yaml
-vm0 run intro --artifact-name my-artifact "echo hello world to readme.md"
+vm0 run intro --artifact-name artifact "echo hello world to readme.md"
 ```
 
-Pull the result:
+### Pull the result
 
 ```bash
 cd my-artifact
