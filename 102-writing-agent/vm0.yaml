@@ -8,6 +8,8 @@ agents:
     volumes:
       - claude-system:/home/user/.config/claude
     working_dir: /home/user/workspace
+    environment:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
 volumes:
   claude-system:
