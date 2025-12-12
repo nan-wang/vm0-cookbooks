@@ -115,7 +115,8 @@ prompts = {
     "founder": "Transform this photo into a professional startup founder headshot. Keep the same person's face and features. Smart casual blazer over crisp shirt, warm confident smile, soft studio lighting, clean neutral gray background, sharp focus, high-end corporate photography style",
     "corporate": "Transform this photo into an executive business portrait. Keep the same person's face and features. Formal navy suit with white dress shirt, confident professional expression, soft even studio lighting, neutral office background, corporate photography style",
     "creative": "Transform this photo into a modern creative professional headshot. Keep the same person's face and features. Stylish casual attire, relaxed confident smile, natural warm lighting, minimalist white background, artistic photography style",
-    "casual": "Transform this photo into a friendly professional portrait. Keep the same person's face and features. Smart casual clothing, genuine warm smile, soft natural lighting, clean simple background, approachable startup culture vibe"
+    "casual": "Transform this photo into a friendly professional portrait. Keep the same person's face and features. Smart casual clothing, genuine warm smile, soft natural lighting, clean simple background, approachable startup culture vibe",
+    "natural": "Transform this photo into a relaxed natural portrait. Keep the same person's face and features. Comfortable everyday clothing like soft sweater or simple shirt, genuine relaxed smile with natural expression, soft diffused daylight, clean solid warm beige background, professional portrait photography with cozy inviting feel"
 }
 
 prompt = prompts.get(style, prompts["founder"])

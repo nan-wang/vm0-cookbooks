@@ -34,7 +34,7 @@ The script will:
 
 | Parameter | Required | Default | Description |
 |-----------|----------|---------|-------------|
-| --style | No | founder | Portrait style: founder, corporate, creative, casual |
+| --style | No | founder | Portrait style: founder, corporate, creative, casual, natural |
 | --output-dir | No | . | Where to save generated images |
 
 ### Examples

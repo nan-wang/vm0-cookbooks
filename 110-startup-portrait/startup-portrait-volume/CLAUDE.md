@@ -16,6 +16,7 @@ You can create different looks:
 - **Corporate** - Formal business executive
 - **Creative** - Modern artistic professional
 - **Casual** - Friendly and approachable
+- **Natural** - Relaxed and comfortable with warm soothing background
 
 ## Guidelines
 
